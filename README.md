@@ -9,6 +9,7 @@ Step 2.
 Follow the instructions to configure a certificate (and ensure that the client OS trusts it).
 Configure the client OS to trust the self signed certificate.
 # generate a self-signed TLS certificate using OpenSSL:
+![Screenshot from 2023-05-04 02-37-06](https://user-images.githubusercontent.com/54754559/236090422-4a5d95e8-75f4-456e-afde-7f5e4e993110.png)
 
 
 # access ArgoCD UI
