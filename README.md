@@ -17,11 +17,11 @@ This command will generate a self-signed TLS certificate with a validity of 365 
 This command will create a secret named argocd-server-tls in the argocd namespace, containing the TLS certificate and key.
 
 # ----Modify the ArgoCD server deployment to use the TLS certificate:
-![Screenshot from 2023-05-04 02-44-00](https://user-images.githubusercontent.com/54754559/236091004-9ea579b8-45c3-41dd-a885-406b8649955c.png)
+![Screenshot from 2023-05-04 02-49-36](https://user-images.githubusercontent.com/54754559/236091582-89fa70f4-43f6-4e12-a638-6db2d94e71d0.png)
 This command will modify the argocd-server deployment to mount the argocd-server-tls secret as a volume, and configure the ArgoCD server container to use the TLS certificate and key.
 
 # ----Verify that the ArgoCD server is now using TLS by checking the logs of the argocd-server container:
-![Screenshot from 2023-05-04 02-45-59](https://user-images.githubusercontent.com/54754559/236091209-747c2b7a-858e-47a0-aef6-ae86f573ba35.png)
+![Screenshot from 2023-05-04 02-51-05](https://user-images.githubusercontent.com/54754559/236091884-4bad62e1-2d61-4b0e-9618-af11d3d078f9.png)
 This command should output a message indicating that the HTTPS server has started, indicating that the ArgoCD server is now using TLS.
 
 By following these steps, you should now have configured your Kubernetes cluster to trust the ArgoCD server's TLS certificate.
