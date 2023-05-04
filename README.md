@@ -9,11 +9,11 @@ Step 2.
 Follow the instructions to configure a certificate (and ensure that the client OS trusts it).
 Configure the client OS to trust the self signed certificate.
 # ----generate a self-signed TLS certificate using OpenSSL:
-![Screenshot from 2023-05-04 02-37-06](https://user-images.githubusercontent.com/54754559/236090422-4a5d95e8-75f4-456e-afde-7f5e4e993110.png)
+![Screenshot from 2023-05-04 02-53-38](https://user-images.githubusercontent.com/54754559/236092648-564218ef-4512-41ad-a38f-8a8cef98067d.png)
 This command will generate a self-signed TLS certificate with a validity of 365 days, using a key size of 2048 bits. The -subj option specifies the subject of the certificate, which should match the hostname or IP address of your ArgoCD server.
 
 # ----Create a Kubernetes secret to store the TLS certificate:
-![Screenshot from 2023-05-04 02-41-34](https://user-images.githubusercontent.com/54754559/236090739-d10602bf-2010-4d7e-9814-437999f8f198.png)
+![Screenshot from 2023-05-04 02-54-57](https://user-images.githubusercontent.com/54754559/236092892-45bde8f7-b4a6-4c74-b8f2-bca22b25cea9.png)
 This command will create a secret named argocd-server-tls in the argocd namespace, containing the TLS certificate and key.
 
 # ----Modify the ArgoCD server deployment to use the TLS certificate:
